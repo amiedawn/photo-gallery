@@ -21,12 +21,13 @@ function Nav() {
     },
   ];
 
-  const handleClick = () => {
-    console.log("click handled")
-  }
+  const handleClick = (item) => {
+    console.log(item);
+    return item;
+  };
 
   return (
-    <header>
+    <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
           <span role="img" aria-label="camera"> 🦌</span> Animal Gallery
@@ -35,12 +36,12 @@ function Nav() {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => handleClick()}>
+            <a data-testid="about" href="#about" onClick={() => handleClick("About")}>
               About
             </a>
           </li>
           <li className={"mx-2"}>
-            <span onClick={() => handleClick()}>
+            <span onClick={() => handleClick('Contact')}>
               Contact
             </span>
           </li>
@@ -52,7 +53,7 @@ function Nav() {
               key={category.name}
             >
                {/* event listener for every time a category is clicked */}
-              <span onClick={() => { handleClick(); }}>
+              <span onClick={() => { handleClick(category.name); }}>
                 {capitalizeFirstLetter(category.name)} 
               </span>
             </li>  
@@ -60,7 +61,7 @@ function Nav() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Nav;
