@@ -8,6 +8,7 @@ function Nav(props) {
     setCurrentCategory,
   } = props;
 
+  //hook to make category title appear on tab
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
