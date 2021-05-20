@@ -6,10 +6,19 @@ function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
+
   // destructure formState object into its named properties
   const { name, email, message } = formState;
 
-  function handleChange(e) {
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!errorMessage) {
+      setFormState({ [e.target.name]: e.target.value });
+      console.log('Form', formState);
+    }
+   };
+
+  const handleChange = (e) => {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
@@ -24,19 +33,11 @@ function ContactForm() {
         setErrorMessage('');
       }
     }
-    if (!errorMessage) {
-      setFormState({...formState, [e.target.name]: e.target.value });
-    }
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(formState);
   }
 
   return (
     <section>
-      <h1>Contact Me</h1>
+      <h1 data-testid="h1tag">Contact Me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name: </label>
@@ -55,10 +56,10 @@ function ContactForm() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button type="submit">Submit Form</button>
+        <button data-testid="button" type="submit">Submit Form</button>
       </form>
     </section>
-  )
+  );
 }
 
 export default ContactForm;

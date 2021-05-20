@@ -37,7 +37,7 @@ function App() {
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
         contactSelected={contactSelected}
-        setCurrentCategory={setContactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       <main>
         {/* if contactSelected is false, the Gallery and About components should be rendered
