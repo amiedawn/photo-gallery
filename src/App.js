@@ -26,17 +26,30 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+  // condition what renders based on which menu item the user selects from the navbar
+  // set the value to false to prevent the contact form from showing when a user initially goes to the homepage
+  const [contactSelected, setContactSelected] = useState(false);
+
   return (
     <div>
       <Nav
         categories={categories}
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
-        ></Nav>
+        contactSelected={contactSelected}
+        setCurrentCategory={setContactSelected}
+      ></Nav>
       <main>
-        <ContactForm></ContactForm>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
+        {/* if contactSelected is false, the Gallery and About components should be rendered
+        if contactSelected is true, the ContactForm should be rendered */}
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
       </main>
     </div>
   );
