@@ -8,19 +8,19 @@ function App() {
   const [categories] = useState([
     {
       name: "Cats",
-      description: "cats",
+      description: "Cutest cats around",
     },
     {
       name: "Dogs",
-      description: "dogs",
+      description: "Devilish dogs",
     },
     {
       name: "Pandas",
-      description: "pandas",
+      description: "Pretty pandas",
     },
     {
       name: "Monkeys",
-      description: "monkeys",
+      description: "Marvelous monkeys",
     },
   ]);
 
@@ -34,8 +34,8 @@ function App() {
     <div>
       <Nav
         categories={categories}
-        currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
       ></Nav>
