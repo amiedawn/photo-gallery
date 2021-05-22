@@ -1,16 +1,21 @@
-import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+
+import React, { useEffect } from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
-  const {
-    categories = [],
-    currentCategory,
-    setCurrentCategory,
-    contactSelected,
-    setContactSelected
-  } = props;
+	const {
+		categories = [],
+		setCurrentCategory,
+		currentCategory,
+		contactSelected,
+		setContactSelected,
+	} = props;
 
-  return (
+	useEffect(() => {
+		document.title = capitalizeFirstLetter(currentCategory.name);
+	}, [currentCategory]);
+
+	return (
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
@@ -33,20 +38,20 @@ function Nav(props) {
             </span>
           </li>
           {/* map over the category array to display each category in the Nav  */}
-          {
-            categories.map((category) => (
+          {categories.map((category) => (
             <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && `navActive`
+              className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`
                 }`}
               key={category.name}
             >
             
                {/* event listener for every time a category is clicked */}
-              <span onClick={() => { 
-                setCurrentCategory(category);
-                setContactSelected(false);
-              }}>
+              <span 
+                onClick={() => { 
+                  setCurrentCategory(category);
+                  setContactSelected(false);
+                }}
+              >
                 {capitalizeFirstLetter(category.name)} 
               </span>
             </li>  

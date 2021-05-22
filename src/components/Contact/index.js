@@ -10,14 +10,6 @@ function ContactForm() {
   // destructure formState object into its named properties
   const { name, email, message } = formState;
 
-   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
-    }
-   };
-
   const handleChange = (e) => {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
@@ -33,7 +25,15 @@ function ContactForm() {
         setErrorMessage('');
       }
     }
-  }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!errorMessage) {
+      setFormState({ [e.target.name]: e.target.value });
+      console.log('Form', formState);
+    }
+   };
 
   return (
     <section>
