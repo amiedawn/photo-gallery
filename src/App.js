@@ -7,19 +7,19 @@ import ContactForm from "./components/Contact";
 function App() {
   const [categories] = useState([
     {
-      name: "Cats",
+      name: "cats",
       description: "Cutest cats",
     },
     {
-      name: "Dogs",
+      name: "dogs",
       description: "Devilish dogs",
     },
     {
-      name: "Pandas",
+      name: "pandas",
       description: "Pretty pandas",
     },
     {
-      name: "Monkeys",
+      name: "monkeys",
       description: "Marvelous monkeys",
     },
   ]);

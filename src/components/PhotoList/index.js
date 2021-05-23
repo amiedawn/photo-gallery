@@ -5,121 +5,102 @@ const PhotoList = ({ category }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const [photos] = useState([
-		{
-			name: "Grocery aisle",
-			category: "commercial",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Grocery booth",
-			category: "commercial",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Building exterior",
-			category: "commercial",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Restaurant table",
-			category: "commercial",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Cafe interior",
-			category: "commercial",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Cat green eyes",
-			category: "portraits",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Green parrot",
-			category: "portraits",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Yellow macaw",
-			category: "portraits",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Pug smile",
-			category: "portraits",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Pancakes",
-			category: "food",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Burrito",
-			category: "food",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Scallop pasta",
-			category: "food",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Burger",
-			category: "food",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Fruit bowl",
-			category: "food",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Green river",
-			category: "landscape",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Docks",
-			category: "landscape",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Panoramic village by sea",
-			category: "landscape",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Domestic landscape",
-			category: "landscape",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-		{
-			name: "Park bench",
-			category: "landscape",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie",
-		},
-	]);
+    {
+      name: 'Cat 1',
+      category: 'cats',
+      description: 'Boots',
+    },
+    {
+      name: 'Cat 2',
+      category: 'cats',
+      description: 'Bobby',
+    },
+    {
+      name: 'Cat 3',
+      category: 'cats',
+      description: 'Tiger',
+    },
+    {
+      name: 'Cat 4',
+      category: 'cats',
+      description: 'Stripes',
+    },
+    {
+      name: 'Cat 5',
+      category: 'cats',
+      description: 'Whisper',
+    },
+    {
+      name: 'Dog 1',
+      category: 'dogs',
+      description: 'Buster',
+    },
+    {
+      name: 'Dog 2',
+      category: 'dogs',
+      description: 'Lassie',
+    },
+    {
+      name: 'Dog 3',
+      category: 'dogs',
+      description: 'Wrinkles',
+    },
+    {
+      name: 'Dog 4',
+      category: 'dogs',
+      description: 'Slicker',
+    },
+    {
+      name: 'Dog 5',
+      category: 'dogs',
+      description: 'Pooch',
+    },
+    {
+      name: 'Panda 1',
+      category: 'pandas',
+      description: 'Su Lin',
+    },
+    {
+      name: 'Panda 2',
+      category: 'pandas',
+      description: 'Zhen Zhen',
+    },
+    {
+      name: 'Panda 3',
+      category: 'pandas',
+      description: 'Ling-Ling',
+    },
+    {
+      name: 'Panda 4',
+      category: 'pandas',
+      description: 'Bao Bao',
+    },
+    {
+      name: 'Panda 5',
+      category: 'pandas',
+      description: 'Mei Xang',
+    },
+    {
+      name: 'Monkey 1',
+      category: 'monkeys',
+      description: 'Freedo',
+    },
+    {
+      name: 'Monkey 2',
+      category: 'monkeys',
+      description: 'Chucky',
+    },
+    {
+      name: 'Monkey 3',
+      category: 'monkeys',
+      description: 'Jasper',
+    },
+    {
+      name: 'Monkey 4',
+      category: 'monkeys',
+      description: 'Beans',
+    },
+  ]);
 
 	const [currentPhoto, setCurrentPhoto] = useState();
 
