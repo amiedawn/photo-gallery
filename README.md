@@ -12,11 +12,11 @@
 
 ## Description: 
 
-This SPA (Single-Page Application) was bootstrapped with Create React App. It is a collection of beautiful photos that are categorized by animal type.
+This SPA (Single-Page Application) was bootstrapped with Create React App. It is a collection of beautiful photos that are categorized by animal type. Here is a screenshot of the application:<br><br>![Screenshot](./client/src/assets/cover/../../../../src/assets/cover/photo-gallery-screenshot.png)
 
 ## Installation Instructions:
 
-This application is remotely deployed at https://    com/ . However, if you would like to clone it, you may do so at https://github.com/amiedawn/photo-gallery/tree/master .
+This application is remotely deployed at https://amiedawn.github.io/photo-gallery/ . However, if you would like to clone it, you may do so at https://github.com/amiedawn/photo-gallery/tree/master .
 
 ## License:
 
